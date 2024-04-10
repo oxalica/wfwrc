@@ -3,7 +3,9 @@ name = "wfwrc"
 version = "0.1.0"
 edition = "2021"
 
-[dependencies]
+[features]
+default = []
+loom = ["dep:loom"]
 
-[dev-dependencies]
-loom = "0.7"
+[dependencies]
+loom = { version = "0.7", optional = true }
